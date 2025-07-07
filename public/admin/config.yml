@@ -1,7 +1,9 @@
+# Минимальный config.yml для избежания 404 ошибки
+# Реальная конфигурация загружается программно через JavaScript
 backend:
   name: github
-  repo: hounch/yoga-home
-  branch: feature
+  repo: dolgihegor2323-8559/yoga-home
+  branch: review
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -98,4 +100,4 @@ collections:
       - { label: "Фото", name: "image", widget: "image" }
       - { label: "Цена", name: "cost", widget: "string" }
       - { label: "Порядок", name: "order", widget: "number", default: 1 }
-      - { label: "Описание", name: "description", widget: "text" }
+      - { label: "Описание", name: "description", widget: "text" } 
