@@ -2,7 +2,7 @@
 # Реальная конфигурация загружается программно через JavaScript
 backend:
   name: github
-  repo: dolgihegor2323-8559/yoga-home
+  repo: AMGSex69/yoga-home
   branch: review
 
 media_folder: "public/uploads"
