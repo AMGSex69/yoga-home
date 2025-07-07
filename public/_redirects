@@ -1,0 +1,5 @@
+# Redirect for Netlify CMS admin
+/admin/* /admin/index.html 200
+
+# Catch all redirect for SPA
+/* /index.html 200 

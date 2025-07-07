@@ -1,8 +1,6 @@
-# Минимальный config.yml для избежания 404 ошибки
-# Реальная конфигурация загружается программно через JavaScript
+# Конфигурация для Netlify с git-gateway
 backend:
-  name: github
-  repo: AMGSex69/yoga-home
+  name: git-gateway
   branch: review
 
 media_folder: "public/uploads"
