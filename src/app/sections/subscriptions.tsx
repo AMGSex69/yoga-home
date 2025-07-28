@@ -24,7 +24,7 @@ export default function Subscriptions({
 				</div>
 			</section>
 			<section className="monthly-subscription">
-				<div className="container mt-[120px] mx-auto max-w-full md:lg:max-w-[1200px] text-center text-[#494542] px-4">
+				<div className="container mt-[60px] mx-auto max-w-full md:lg:max-w-[1200px] text-center text-[#494542] px-4">
 					<h2 className="font-[400px] text-[42px] leading-[48px]">
 						Месячные абонементы Йога Хом
 					</h2>

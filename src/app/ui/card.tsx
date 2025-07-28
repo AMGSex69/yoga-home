@@ -38,13 +38,16 @@ export default function Card({ type, data }: CardProps) {
 	};
 	return (
 		<div className={`${data.className || ""} h-full w-full`}>
-			<article className="bg-[#EEE5DC] rounded-[20px] h-full flex flex-col min-h-[400px]">
+			<article className={`rounded-[20px] h-full flex flex-col ${type === "Card5" ? "min-h-[250px]" :
+				type === "Card6" ? "min-h-[250px] bg-[#859974]" :
+					"min-h-[400px] bg-[#EEE5DC]"
+				}`}>
 				{/* Изображение для всех типов кроме Card5 */}
 				{(data.imageSrc || data.image) && (
 					<div className={`rounded-[20px] overflow-hidden ${type === "Card2" ? "h-[350px]" :
-							type === "Card3" ? "h-[358px]" :
-								type === "Card4" ? "h-[400px]" :
-									"h-[212px]"
+						type === "Card3" ? "h-[358px]" :
+							type === "Card4" ? "h-[400px]" :
+								"h-[212px]"
 						}`}>
 						<Image
 							src={data.imageSrc || data.image || ""}
@@ -60,9 +63,9 @@ export default function Card({ type, data }: CardProps) {
 								objectPosition: 'center',
 							}}
 							className={`w-full object-cover ${type === "Card2" ? "h-[350px]" :
-									type === "Card3" ? "h-[358px]" :
-										type === "Card4" ? "h-[400px]" :
-											"h-[212px]"
+								type === "Card3" ? "h-[358px]" :
+									type === "Card4" ? "h-[400px]" :
+										"h-[212px]"
 								}`}
 						/>
 					</div>
@@ -70,7 +73,8 @@ export default function Card({ type, data }: CardProps) {
 
 				{/* Контент для разных типов карточек */}
 				<div className="p-4 flex flex-col flex-grow text-left">
-					{data.title && data.title !== "Название события" && type !== "Card4" && (
+					{/* Заголовки для Card1, Card2, Card3 */}
+					{(type === "Card1" || type === "Card2" || type === "Card3") && data.title && data.title !== "Название события" && (
 						<h3 className="text-xl md:text-[26px] mb-2 md:mb-3">
 							{data.title}
 						</h3>
@@ -121,7 +125,7 @@ export default function Card({ type, data }: CardProps) {
 					)}
 
 					{/* Описание для Card1 и Card4 */}
-					{data.description && (
+					{data.description && type !== "Card5" && type !== "Card6" && (
 						<p className="text-[#494542] text-[14px] font-[500px] leading-[150%]">
 							{data.description}
 						</p>
@@ -129,19 +133,22 @@ export default function Card({ type, data }: CardProps) {
 
 					{/* Специфичный контент для Card5 */}
 					{type === "Card5" && (
-						<div className="bg-[#859974] w-full min-h-[250px] rounded-[20px] text-[#EEE5DC] flex flex-col justify-between p-6">
+						<div className={`w-full h-[250px] rounded-[20px] flex flex-col justify-between p-6 ${data.name === "Первое пробное занятие"
+							? "bg-[#EEE5DC] text-[#494542] border border-[#494542]"
+							: "bg-[#859974] text-[#EEE5DC]"
+							}`}>
 							<div className="text-[28px] md:text-[32px] font-[400] leading-[130%] text-left">
 								<p>{data.name}</p>
 							</div>
 							<div className="flex justify-between items-end mt-auto">
 								<p className="text-xl md:text-2xl font-bold">{data.cost}</p>
-								<LogoIcon />
+								{data.name === "Первое пробное занятие" ? <LogoIconDark /> : <LogoIcon />}
 							</div>
 						</div>
 					)}
 					{/* Специфичный контент для Card6 */}
 					{type === "Card6" && (
-						<div className="bg-[#859974] w-full min-h-[250px] rounded-[20px] text-[#EEE5DC] flex flex-col justify-between p-6">
+						<div className="w-full h-[250px] text-[#EEE5DC] flex flex-col justify-between p-6">
 							<div className="text-[28px] md:text-[32px] text-left leading-[130%]">
 								<p>{data.name}</p>
 							</div>
@@ -257,6 +264,24 @@ const LogoIcon = () => (
 		<path
 			d="M22.4074 43.2873C17.5892 42.7775 19.3367 33.6663 25.734 35.6415C32.1313 37.6166 31.9568 46.4096 26.9495 49.3402C20.7441 52.9719 11.468 49.6075 11.468 39.2095C11.468 30.7991 11.6386 14.297 11.468 7.03348M2 17.5263C2 17.5263 2 34.3672 2 42.7775C2 52.1436 8.6532 61 21.7678 61C27.7172 61 33.2188 57.878 36.6094 52.9719C40 48.0659 40 42.2041 40 38.5086V29.1426C40 27.6771 40 28.9123 40 26.3246M30.2761 6.01404V29.1426M20.7441 2V28.3143"
 			stroke="#EEE5DC"
+			strokeWidth="3"
+			strokeLinecap="round"
+			strokeLinejoin="round"
+		/>
+	</svg>
+);
+
+const LogoIconDark = () => (
+	<svg
+		width="42"
+		height="63"
+		viewBox="0 0 42 63"
+		fill="none"
+		xmlns="http://www.w3.org/2000/svg"
+	>
+		<path
+			d="M22.4074 43.2873C17.5892 42.7775 19.3367 33.6663 25.734 35.6415C32.1313 37.6166 31.9568 46.4096 26.9495 49.3402C20.7441 52.9719 11.468 49.6075 11.468 39.2095C11.468 30.7991 11.6386 14.297 11.468 7.03348M2 17.5263C2 17.5263 2 34.3672 2 42.7775C2 52.1436 8.6532 61 21.7678 61C27.7172 61 33.2188 57.878 36.6094 52.9719C40 48.0659 40 42.2041 40 38.5086V29.1426C40 27.6771 40 28.9123 40 26.3246M30.2761 6.01404V29.1426M20.7441 2V28.3143"
+			stroke="#494542"
 			strokeWidth="3"
 			strokeLinecap="round"
 			strokeLinejoin="round"
