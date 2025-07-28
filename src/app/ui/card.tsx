@@ -4,6 +4,7 @@ import Image from "next/image";
 
 export type CardData = {
 	imageSrc?: string;
+	image?: string;
 	name?: string;
 	title?: string;
 	type?: string;
@@ -24,46 +25,44 @@ export default function Card({ type, data }: CardProps) {
 	const getImageSize = () => {
 		switch (type) {
 			case "Card1":
-				return { width: 373, height: 191 };
+				return { width: 366, height: 212 };
 			case "Card2":
-				return { width: 500, height: 300 };
+				return { width: 500, height: 350 };
 			case "Card3":
-				return { width: 468, height: 312 };
-			case "Card4":
 				return { width: 266, height: 358 };
+			case "Card4":
+				return { width: 368, height: 400 };
 			default:
-				return { width: 300, height: 200 };
+				return { width: 366, height: 212 };
 		}
 	};
 	return (
 		<div className={`${data.className || ""} h-full w-full`}>
 			<article className="bg-[#EEE5DC] rounded-[20px] h-full flex flex-col min-h-[400px]">
 				{/* Изображение для всех типов кроме Card5 */}
-				{data.imageSrc && (
-					<div className="rounded-[20px] overflow-hidden">
+				{(data.imageSrc || data.image) && (
+					<div className={`rounded-[20px] overflow-hidden ${type === "Card2" ? "h-[350px]" :
+							type === "Card3" ? "h-[358px]" :
+								type === "Card4" ? "h-[400px]" :
+									"h-[212px]"
+						}`}>
 						<Image
-							src={data.imageSrc}
-							alt={data.title || "Изображение"}
+							src={data.imageSrc || data.image || ""}
+							alt={data.title || data.name || "Изображение"}
 							{...getImageSize()}
 							style={{
 								width: '100%',
-								height: 'auto',
+								height: type === "Card2" ? '350px' :
+									type === "Card3" ? '358px' :
+										type === "Card4" ? '400px' :
+											'212px',
+								objectFit: 'cover',
+								objectPosition: 'center',
 							}}
-							className={`object-cover ${type === "Card1"
-								? "h-[191px] w-full max-w-[373px]"
-								: type === "Card2"
-									? "h-[200px] sm:h-[250px] md:h-[300px] w-full"
-									: type === "Card3"
-										? "w-full max-w-[266px] h-[300px] sm:h-[358px]"
-										: type === "Card4"
-											? "h-[180px] sm:h-[212px] w-full max-w-[268px]"
-											: type === "Card5"
-												? "w-full max-w-[369px] h-[200px] sm:h-[250px]"
-												: type === "Card6"
-													? "w-full max-w-[369px] h-[200px] sm:h-[250px]"
-													: type === "Card7"
-														? "w-full max-w-[369px] h-[200px] sm:h-[250px]"
-														: "h-[400px] sm:h-[500px] w-full"
+							className={`w-full object-cover ${type === "Card2" ? "h-[350px]" :
+									type === "Card3" ? "h-[358px]" :
+										type === "Card4" ? "h-[400px]" :
+											"h-[212px]"
 								}`}
 						/>
 					</div>
@@ -71,9 +70,16 @@ export default function Card({ type, data }: CardProps) {
 
 				{/* Контент для разных типов карточек */}
 				<div className="p-4 flex flex-col flex-grow text-left">
-					{data.title && (
+					{data.title && data.title !== "Название события" && type !== "Card4" && (
 						<h3 className="text-xl md:text-[26px] mb-2 md:mb-3">
 							{data.title}
+						</h3>
+					)}
+
+					{/* Имя для Card4 (преподаватели) */}
+					{type === "Card4" && data.name && (
+						<h3 className="text-xl md:text-[26px] mb-2 md:mb-3">
+							{data.name}
 						</h3>
 					)}
 

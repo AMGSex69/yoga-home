@@ -133,8 +133,17 @@ export function Carousel({ type, data }: CarouselProps) {
 	}, [type, apiData, data]);
 
 	const getCardWidth = () => {
-		// Адаптивная ширина карточек
-		return "w-[300px] md:w-[350px] lg:w-[380px] xl:w-[400px]";
+		// Условная ширина карточек в зависимости от типа
+		if (type === "Card2") {
+			return "w-[500px]"; // Увеличенная для студии
+		}
+		if (type === "Card3") {
+			return "w-[266px]"; // Для событий
+		}
+		if (type === "Card4") {
+			return "w-[368px]"; // Для преподавателей
+		}
+		return "w-[366px]"; // Стандартная для остальных
 	};
 
 	if (loading && !data) {
@@ -161,7 +170,11 @@ export function Carousel({ type, data }: CarouselProps) {
 				<>
 					<button
 						onClick={prevSlide}
-						className="absolute -left-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden md:block"
+						className={`absolute -left-2 z-10 bg-white/80 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden md:block ${type === "Card2" ? "top-[175px] -translate-y-1/2" :
+								type === "Card3" ? "top-[179px] -translate-y-1/2" :
+									type === "Card4" ? "top-[200px] -translate-y-1/2" :
+										"top-1/2 -translate-y-1/2"
+							}`}
 						aria-label="Previous slide"
 					>
 						<svg
@@ -182,7 +195,11 @@ export function Carousel({ type, data }: CarouselProps) {
 					</button>
 					<button
 						onClick={nextSlide}
-						className="absolute -right-2 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden md:block"
+						className={`absolute -right-2 z-10 bg-white/80 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden md:block ${type === "Card2" ? "top-[175px] -translate-y-1/2" :
+								type === "Card3" ? "top-[179px] -translate-y-1/2" :
+									type === "Card4" ? "top-[200px] -translate-y-1/2" :
+										"top-1/2 -translate-y-1/2"
+							}`}
 						aria-label="Next slide"
 					>
 						<svg
