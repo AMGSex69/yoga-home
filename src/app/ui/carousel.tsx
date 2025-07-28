@@ -172,8 +172,7 @@ export function Carousel({ type, data }: CarouselProps) {
 						onClick={prevSlide}
 						className={`absolute -left-2 z-10 bg-white/80 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden md:block ${type === "Card2" ? "top-[175px] -translate-y-1/2" :
 								type === "Card3" ? "top-[179px] -translate-y-1/2" :
-									type === "Card4" ? "top-[200px] -translate-y-1/2" :
-										"top-1/2 -translate-y-1/2"
+									"top-1/2 -translate-y-1/2"
 							}`}
 						aria-label="Previous slide"
 					>
@@ -197,8 +196,7 @@ export function Carousel({ type, data }: CarouselProps) {
 						onClick={nextSlide}
 						className={`absolute -right-2 z-10 bg-white/80 hover:bg-white shadow-lg rounded-full p-2 transition-all duration-200 opacity-0 group-hover:opacity-100 hidden md:block ${type === "Card2" ? "top-[175px] -translate-y-1/2" :
 								type === "Card3" ? "top-[179px] -translate-y-1/2" :
-									type === "Card4" ? "top-[200px] -translate-y-1/2" :
-										"top-1/2 -translate-y-1/2"
+									"top-1/2 -translate-y-1/2"
 							}`}
 						aria-label="Next slide"
 					>
