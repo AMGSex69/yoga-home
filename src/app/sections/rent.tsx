@@ -9,26 +9,23 @@ interface RentProps {
 export default function Rent({ eventsData }: RentProps) {
 	return (
 		<>
-			<section
-				className="rent max-w-full md:lg:max-w-[1200px] lg:md:mx-auto"
-				id="rent"
-			>
-				<div className="container mx-auto max-w-full md:lg:max-w-[1200px] mt-[123px]">
+			<section className="rent" id="rent">
+				<div className="container mx-auto mt-[123px]">
 					<Carousel type="Card3" data={eventsData} />
 
-					<div className="rent-content text-[#494542] flex mt-[93px] justify-center items-center">
-						<div className="w-[562px] pt-[32px]">
-							<h2 className="font-[400px] text-[42px] leading-[114%]">
+					<div className="rent-content text-[#494542] flex flex-col md:flex-row mt-[93px] justify-center items-start gap-8">
+						<div className="w-full md:w-[562px] pt-[32px]">
+							<h2 className="font-[400px] text-[32px] md:text-[42px] leading-[114%]">
 								Вы можете арендовать
 								<br />
 								100м2 нашей уютной
 								<br />и светлой студии
 							</h2>
-							<p className="text-[22px] ml-[22px] mt-[35px] mb-[40px] leading-[30px]">
+							<p className="text-[18px] md:text-[22px] ml-[0px] md:ml-[22px] mt-[35px] mb-[40px] leading-[30px]">
 								Помещение можно арендовать для йоги,
-								<br />
+								<br className="hidden md:block" />
 								танцев, фитнеса, практик, девичников,
-								<br />
+								<br className="hidden md:block" />
 								женских кругов, дней рождений и фотосессий.
 							</p>
 							<Button
@@ -51,13 +48,13 @@ export default function Rent({ eventsData }: RentProps) {
 								</svg>
 							</Button>
 						</div>
-						<div className="w-[534px] h-[397] bg-[#859974] ml-[46px] text-[#EEE5DC] pt-[32px] pl-[40px] rounded-[20px]">
-							<h2 className="font-[400px] text-[42px] leading-[114%]">
+						<div className="w-full md:w-[534px] h-auto min-h-[397px] bg-[#859974] text-[#EEE5DC] pt-[32px] pl-[20px] md:pl-[40px] rounded-[20px]">
+							<h2 className="font-[400px] text-[32px] md:text-[42px] leading-[114%]">
 								В вашем
 								<br />
 								распоряжении будут:
 							</h2>
-							<ul className="text-[22px] list-disc mt-[46px] w-[447px] mx-auto">
+							<ul className="text-[18px] md:text-[22px] list-disc mt-[46px] w-full max-w-[447px] mx-auto">
 								<li className="mb-[28px]">
 									Просторный зал вместимостью
 									<br />

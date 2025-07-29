@@ -7,30 +7,49 @@ export default function Sertificates() {
 	return (
 		<>
 			<section className="sertificates">
-				<div className=" mt-[120px] mx-auto max-w-[1200px] text-center text-[#494542]">
-					<h2 className="font-[400px] text-[42px] leading-[48px]">
+				<div className="container mx-auto mt-[120px] text-center text-[#494542]">
+					<h2 className="font-[400px] text-[32px] md:text-[42px] leading-[48px]">
 						Подарочные сертификаты
 					</h2>
 
-					<div className="hidden lg:flex md:flex content mx-auto md:lg:max-w-[1200px] mt-[90px] justify-center">
+					{/* Десктопная версия */}
+					<div className="hidden lg:flex md:flex mt-[90px] justify-center gap-4">
 						<Image
 							src={"/sertificate1.jpg"}
 							width={559}
 							height={414}
 							alt={"sertificate1"}
-							className={"mr-[21px] object-cover"}
+							className={"w-[559px] h-[414px] object-cover rounded-lg"}
 						></Image>
 						<Image
 							src={"/sertificate2.jpg"}
 							width={559}
 							height={414}
 							alt={"sertificate2"}
-							className={"object-cover"}
+							className={"w-[559px] h-[414px] object-cover rounded-lg"}
+						></Image>
+					</div>
+
+					{/* Мобильная версия */}
+					<div className="lg:hidden md:hidden flex flex-col mt-[90px] gap-4">
+						<Image
+							src={"/sertificate1.jpg"}
+							width={559}
+							height={414}
+							alt={"sertificate1"}
+							className={"w-full h-auto object-cover rounded-lg"}
+						></Image>
+						<Image
+							src={"/sertificate2.jpg"}
+							width={559}
+							height={414}
+							alt={"sertificate2"}
+							className={"w-full h-auto object-cover rounded-lg"}
 						></Image>
 					</div>
 					<Button
 						variant="outline"
-						className="flex h-[40px] w-[330px] mt-[40px] justify-center items-center font-medium"
+						className="flex h-[40px] w-full max-w-[330px] mt-[40px] justify-center items-center font-medium mx-auto"
 					>
 						Приобрести сертификат/ абонемент
 						<svg

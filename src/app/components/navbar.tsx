@@ -7,29 +7,32 @@ export default function Navbar() {
 	return (
 		<>
 			<nav className="text-[#494542]">
-				<a className="mr-[20px]" href="#">
+				<a className="mr-[20px]" href="#studio">
 					Студия
 				</a>
-				<a className="mr-[20px]" href="#">
+				<a className="mr-[20px]" href="#classes">
 					Классы
 				</a>
-				<a className="mr-[20px]" href="#">
+				<a className="mr-[20px]" href="#trainers">
 					Преподаватели
 				</a>
-				<a className="mr-[20px]" href="#">
+				<a className="mr-[20px]" href="#events">
 					Мероприятия
 				</a>
-				<a className="mr-[20px]" href="#">
+				<a className="mr-[20px]" href="#massage">
 					Массаж
 				</a>
-				<a className="mr-[20px]" href="#">
+				<a className="mr-[20px]" href="#rent">
 					Аренда
 				</a>
-				<a href="#">Контакты</a>
+				<a href="#contacts">Контакты</a>
 			</nav>
 
 			<div className="navbar-toggler">
-				<button onClick={() => setIsOpen(!isOpen)} className="p-2">
+				<button
+					onClick={() => setIsOpen(!isOpen)}
+					className="lg:hidden md:hidden p-2"
+				>
 					<svg
 						width="25"
 						height="9"
@@ -59,26 +62,32 @@ export default function Navbar() {
 				</button>
 
 				{isOpen && (
-					<div className="fixed top-[94px] left-0 right-0 bg-[#EEE5DC] p-4 z-50 shadow-lg">
-						<a className="block py-2" href="#">
+					<div className="open-nav fixed top-[94px] w-full left-0 right-0 bg-[#EEE5DC] p-4 z-50 shadow-lg">
+						<a className="block py-2" href="#studio">
 							Студия
 						</a>
-						<a className="block py-2" href="#">
+						<hr></hr>
+						<a className="block py-2" href="#classes">
 							Классы
 						</a>
-						<a className="block py-2" href="#">
+						<hr></hr>
+						<a className="block py-2" href="#trainers">
 							Преподаватели
 						</a>
-						<a className="block py-2" href="#">
+						<hr></hr>
+						<a className="block py-2" href="#events">
 							Мероприятия
 						</a>
-						<a className="block py-2" href="#">
+						<hr></hr>
+						<a className="block py-2" href="#massage">
 							Массаж
 						</a>
-						<a className="block py-2" href="#">
+						<hr></hr>
+						<a className="block py-2" href="#rent">
 							Аренда
 						</a>
-						<a className="block py-2" href="#">
+						<hr></hr>
+						<a className="block py-2" href="#contacts">
 							Контакты
 						</a>
 					</div>

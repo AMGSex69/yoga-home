@@ -10,8 +10,8 @@ interface EventsProps {
 export default function Goods({ eventsData }: EventsProps) {
 	return (
 		<>
-			<section className="goods">
-				<div className="container mx-auto max-w-full md:lg:max-w-[1200px] mt-[100px] px-4">
+			<section className="goods" id="events">
+				<div className="container mx-auto mt-[100px]">
 					<div className="flex flex-col md:flex-row items-start gap-8">
 						<div className="goods-content text-left text-[#494542] flex-1">
 							<h2 className="font-[400px] text-[42px] leading-[114%]">
@@ -22,22 +22,22 @@ export default function Goods({ eventsData }: EventsProps) {
 								что вам нужно
 							</h2>
 							<ul className="text-[22px] mt-[35px] font-[400px] leading-[50px] max-w-[463px]">
-								<li className="border-b-[1px] pl-[20px] pt-[6px] h-[53px]">
+								<li className="border-b-[1px] pl-[20px] pt-[6px] pb-[6px] min-h-[53px] flex items-center">
 									Весь инвентарь для йоги
 								</li>
-								<li className="border-b-[1px] pl-[20px] pt-[6px] h-[53px] align-middle">
+								<li className="border-b-[1px] pl-[20px] pt-[6px] pb-[6px] min-h-[53px] flex items-center">
 									Опытные преподаватели
 								</li>
-								<li className="border-b-[1px] pl-[20px] pt-[6px] h-[53px] align-middle">
+								<li className="border-b-[1px] pl-[20px] pt-[6px] pb-[6px] min-h-[53px] flex items-center">
 									Внимание к особенностям учеников
 								</li>
-								<li className="border-b-[1px] pl-[20px] pt-[6px] h-[53px] align-middle">
+								<li className="border-b-[1px] pl-[20px] pt-[6px] pb-[6px] min-h-[53px] flex items-center">
 									Душ и раздевалка
 								</li>
-								<li className="border-b-[1px] pl-[20px] pt-[6px] h-[53px] align-middle">
+								<li className="border-b-[1px] pl-[20px] pt-[6px] pb-[6px] min-h-[53px] flex items-center">
 									Средства личной гигиены
 								</li>
-								<li className="border-b-[1px] pl-[20px] pt-[6px] h-[53px] align-middle">
+								<li className="border-b-[1px] pl-[20px] pt-[6px] pb-[6px] min-h-[53px] flex items-center">
 									Фотозона
 								</li>
 							</ul>
@@ -54,7 +54,7 @@ export default function Goods({ eventsData }: EventsProps) {
 						</div>
 					</div>
 				</div>
-				<div className="container mx-auto max-w-full md:lg:max-w-[1200px] text-center text-[#494542] pt-[89px] px-4">
+				<div className="container mx-auto text-center text-[#494542] pt-[89px]">
 					<div className="flex flex-col md:flex-row justify-center gap-4 mb-[120px] max-w-full">
 						<Image
 							src={"/studio10.jpg"}

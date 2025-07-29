@@ -5,8 +5,8 @@ import Image from "next/image";
 export default function Health() {
 	return (
 		<>
-			<section className="health">
-				<div className=" max-w-full md:lg:max-w-[1200px] mt-[8.57rem] flex content-between items-center md:lg:mx-auto">
+			<section className="health" id="massage">
+				<div className="container mx-auto mt-[8.57rem] flex content-between items-center">
 					<div className="content text-left lg:mx-auto ">
 						<div className="md:hidden lg:hidden block max-w-full">
 							<Image
@@ -85,7 +85,7 @@ export default function Health() {
 				</div>
 			</section>
 			<section className="group-photo">
-				<div className="mx-auto max-w-full md:lg:max-w-[1200px] mt-[107px] md:block hidden lg:block">
+				<div className="container mx-auto mt-[107px] md:block hidden lg:block">
 					<Image
 						src={"/group3.jpg"}
 						height={579}

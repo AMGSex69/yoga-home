@@ -5,6 +5,10 @@
   font-size: 14px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -33,15 +37,15 @@
 
 @media (max-width: 1200px) {
   .container {
-    max-width: 1200px;
+    max-width: 100%;
     padding: 0 20px;
   }
 
-  .studio-content .mobile-show {
+  .mobile-show {
     display: none;
   }
 
-  .studio-content .desktop-show {
+  h2 > .desktop-show {
     display: inline;
   }
 }
@@ -49,6 +53,10 @@
 @media (max-width: 992px) {
   :root {
     font-size: 18px;
+  }
+
+  .mobile-show {
+    display: none;
   }
 }
 
@@ -65,6 +73,10 @@
   .text-22px {
     font-size: 16px;
     line-height: 1.5;
+  }
+
+  .mobile-show {
+    display: none;
   }
 }
 
@@ -129,13 +141,19 @@
 
   .studio-content > p {
     font-size: 1rem;
+    margin-top: 1.4rem;
   }
 
-  .studio-content .desktop-show {
+  .desktop-show {
     display: none;
   }
-  .studio-content .mobile-show {
+
+  .mobile-show {
     display: inline;
+  }
+
+  .intro .intro-images {
+    display: none;
   }
 
   .flex-col-mobile {

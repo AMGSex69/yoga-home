@@ -8,8 +8,8 @@ interface StudioProps {
 export default function Studio({ studioData }: StudioProps) {
 	return (
 		<>
-			<section className="studio">
-				<div className="container mx-auto max-w-full md:lg:max-w-[1200px] mt-[79px] px-4">
+			<section className="studio" id="studio">
+				<div className="container mx-auto mt-[79px]">
 					<div className="studio-content text-center text-[#494542]">
 						<h2 className="font-[400px] text-2xl md:text-[42px] leading-[114%]">
 							Йога проходит в уютном,

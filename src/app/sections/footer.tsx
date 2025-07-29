@@ -6,10 +6,10 @@ export default function Footer() {
 	return (
 		<>
 			<section
-				className="bg-[#859974] footer mt-0 py-16 md:py-20 mx-auto max-w-full md:lg:max-w-[1200px] rounded-t-[20px] md:rounded-t-[30px]"
+				className="bg-[#859974] footer mt-0 py-16 md:py-20 rounded-t-[20px] md:rounded-t-[30px]"
 				id="contacts"
 			>
-				<div className="container mx-auto px-4 max-w-full md:lg:max-w-[1200px]">
+				<div className="container mx-auto">
 					<h2 className="text-2xl sm:text-3xl md:text-[42px] leading-tight text-[#EEE5DC] md:text-center lg:text-center text-left">
 						Присоединяйтесь к нам <br />и следите за обновлениями <br />
 						Йога Хом в социальных сетях

@@ -2,18 +2,18 @@
 import Image from "next/image";
 
 export default function GroupPhoto() {
-  return (
-    <>
-      <section className="group-photo md:px-4 lg:px-4 px-0 mx-0 max-w-full md:lg:max-w-[1200px] lg:md:mx-auto">
-        <div className="container md:block lg:block hidden mx-auto max-w-full mt-8">
-          <Image
-            src={"/group1.jpg"}
-            height={717}
-            width={1200}
-            alt="group1"
-          ></Image>
-        </div>
-      </section>
-    </>
-  );
+	return (
+		<>
+			<section className="group-photo">
+				<div className="container mx-auto mt-8 md:block lg:block hidden">
+					<Image
+						src={"/group1.jpg"}
+						height={717}
+						width={1200}
+						alt="group1"
+					></Image>
+				</div>
+			</section>
+		</>
+	);
 }

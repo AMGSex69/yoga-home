@@ -23,7 +23,7 @@ export default async function Home() {
 	const subscriptionsData = getSectionData("subscriptions");
 
 	return (
-		<>
+		<div className="min-h-screen">
 			<Main />
 			<Intro />
 			<Classes classesData={classesData} />
@@ -40,6 +40,6 @@ export default async function Home() {
 			<Sertificates />
 			<Meditation />
 			<Footer />
-		</>
+		</div>
 	);
 }

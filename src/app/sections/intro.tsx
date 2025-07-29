@@ -5,8 +5,8 @@ export default function Intro() {
 	return (
 		<>
 			<section className="intro">
-				<div className="container mx-auto pr-[20px] pl-[20px] pt-[90px] mt-[6rem] max-w-full md:lg:max-w-[1200px]">
-					<div className="studio-content text-center text-[#494542] max-w-full md:lg:max-w-[1200px] lg:md:mx-auto">
+				<div className="container mx-auto pt-[90px] mt-[6rem]">
+					<div className="studio-content text-center text-[#494542]">
 						<h2 className="font-[400px] text-2xl md:text-[42px] leading-[114%]">
 							Йога хом — это дом здорового тела,{" "}
 							<span className="mobile-show">вашей </span>красоты и{" "}
@@ -70,6 +70,15 @@ export default function Intro() {
 							/>
 						</div>
 					</div>
+				</div>
+				<div className="md:hidden flex mt-[5.7rem] h-[477px] w-full">
+					<Image
+						src="/main3.jpg"
+						className="w-full object-cover"
+						alt="main3"
+						width={718}
+						height={477}
+					/>
 				</div>
 			</section>
 		</>

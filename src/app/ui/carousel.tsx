@@ -133,20 +133,24 @@ export function Carousel({ type, data }: CarouselProps) {
 	}, [type, apiData, data]);
 
 	const getCardWidth = () => {
-		// Условная ширина карточек в зависимости от типа
-		if (type === "Card2") {
-			return "w-[500px]"; // Увеличенная для студии
+		switch (type) {
+			case "Card1":
+				return "w-[373px]";
+			case "Card2":
+				return "w-[90vw] sm:w-[360px]";
+			case "Card3":
+				return "w-[266px] sm:w-[360px]";
+			case "Card4":
+				return "w-[266px] sm:w-[360px]";
+			case "Card5":
+				return "w-[90vw] sm:w-[360px]";
+			case "Card6":
+				return "w-[90vw] sm:w-[360px]";
+			case "Card7":
+				return "h-[14.07rem]";
+			default:
+				return "w-[90vw] sm:w-[360px]";
 		}
-		if (type === "Card3") {
-			return "w-[266px]"; // Для событий
-		}
-		if (type === "Card4") {
-			return "w-[368px]"; // Для преподавателей
-		}
-		if (type === "Card5" || type === "Card6") {
-			return "w-[373px]"; // Для абонементов (как в макете)
-		}
-		return "w-[366px]"; // Стандартная для остальных
 	};
 
 	if (loading && !data) {
@@ -167,7 +171,7 @@ export function Carousel({ type, data }: CarouselProps) {
 	const currentData = getData();
 
 	return (
-		<div className="relative group px-4">
+		<div className="relative group">
 			{/* Навигационные кнопки для десктопа */}
 			{currentData.length > 1 && (
 				<>

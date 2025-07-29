@@ -10,8 +10,8 @@ export default function Classes({ classesData }: ClassesProps) {
 	return (
 		<>
 			<section className="classes py-12 md:pt-[88px]" id="classes">
-				<div className="container mx-auto lg:md:text-center px-4 md:px-5 max-w-full md:lg:max-w-[1200px]">
-					<div className="text-center mb-8 md:mb-[101px] max-w-full md:lg:max-w-[1200px] lg:md:mx-auto">
+				<div className="container mx-auto">
+					<div className="text-center mb-8 md:mb-[101px]">
 						<h2 className="text-2xl md:text-[42px] md:text-center text-left">
 							Выбери одно или несколько<span> </span>
 							<span className="md:hidden inline">из 10 </span>
@@ -58,10 +58,10 @@ export default function Classes({ classesData }: ClassesProps) {
 							</svg>
 						</Button>
 					</div>
-					<div className="container carousel max-w-full lg:w-[1200px] md:lg:mx-auto">
+					<div className="carousel">
 						<Carousel type="Card1" data={classesData} />
 					</div>
-					<div className="hidden md:flex flex-col md:flex-row gap-4 mt-8 md:mt-[40px] max-w-full md:lg:max-w-[1200px] lg:md:mx-auto">
+					<div className="hidden md:flex flex-col md:flex-row gap-4 mt-8 md:mt-[40px]">
 						<Button variant="solid" className="w-full md:w-[228px]">
 							Перейти к расписанию
 							<svg
