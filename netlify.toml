@@ -8,12 +8,38 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Редирект для админки
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
 
+# Принудительный редирект с www на основной домен
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200 
+  from = "https://www.yogahom.ru/*"
+  to = "https://yogahom.ru/:splat"
+  status = 301
+  force = true
+
+# Принудительный редирект с http на https
+[[redirects]]
+  from = "http://yogahom.ru/*"
+  to = "https://yogahom.ru/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.yogahom.ru/*"
+  to = "https://yogahom.ru/:splat"
+  status = 301
+  force = true
+
+# Заголовки безопасности
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload" 
