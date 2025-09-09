@@ -98,6 +98,7 @@ export default function Goods({ eventsData }: EventsProps) {
 					<Button
 						variant="solid"
 						className="flex h-[40px] w-[223px] justify-center items-center mt-[40px] mx-auto"
+						onClick={() => window.open('https://t.me/yogahom_krd', '_blank')}
 					>
 						Следить за новостями
 						<svg

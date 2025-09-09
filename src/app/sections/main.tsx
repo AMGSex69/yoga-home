@@ -39,6 +39,7 @@ export default function Main() {
 							<Button
 								variant="solid"
 								className="main-button1 flex justify-center items-center w-full h-[2.85rem] md:w-[211px]"
+								onClick={() => window.open('https://n1140972.yclients.com', '_blank')}
 							>
 								Записаться на йогу
 								<svg
@@ -58,6 +59,7 @@ export default function Main() {
 							<Button
 								variant="outline"
 								className="main-button2 flex justify-center items-center w-full md:w-[228px]"
+								onClick={() => window.open('https://wa.me/79180161192', '_blank')}
 							>
 								Проконсультироваться
 								<svg

@@ -50,6 +50,7 @@ export default function Sertificates() {
 					<Button
 						variant="outline"
 						className="flex h-[40px] w-full max-w-[330px] mt-[40px] justify-center items-center font-medium mx-auto"
+						onClick={() => window.open('https://wa.me/79180161192', '_blank')}
 					>
 						Приобрести сертификат/ абонемент
 						<svg

@@ -19,9 +19,6 @@ export default function Navbar() {
 				<a className="mr-[20px]" href="#events">
 					Мероприятия
 				</a>
-				<a className="mr-[20px]" href="#massage">
-					Массаж
-				</a>
 				<a className="mr-[20px]" href="#rent">
 					Аренда
 				</a>
@@ -79,10 +76,6 @@ export default function Navbar() {
 							Мероприятия
 						</a>
 						<hr></hr>
-						<a className="block py-2" href="#massage">
-							Массаж
-						</a>
-						<hr></hr>
 						<a className="block py-2" href="#rent">
 							Аренда
 						</a>
@@ -98,6 +91,7 @@ export default function Navbar() {
 				<Button
 					variant="outline"
 					className="flex justify-center items-center md:flex h-[40px] w-[173px]"
+					onClick={() => window.open('https://n1140972.yclients.com', '_blank')}
 				>
 					Записаться на йогу
 				</Button>

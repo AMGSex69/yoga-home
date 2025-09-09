@@ -13,7 +13,7 @@ export default function Subscriptions({
 }: SubscriptionsProps) {
 	return (
 		<>
-			<section className="one-time-subscription">
+			<section className="one-time-subscription" id="subscriptions">
 				<div className="container mx-auto mt-[120px] text-center text-[#494542]">
 					<h2 className="font-[400px] text-[42px] leading-[114%]">
 						Разовые абонементы Йога Хом

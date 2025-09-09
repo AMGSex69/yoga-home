@@ -38,6 +38,7 @@ export default function Health() {
 							<Button
 								variant="solid"
 								className="flex h-[40px] w-[209px] justify-center items-center font-medium mr-[42px]"
+								onClick={() => window.open('https://n1140972.yclients.com', '_blank')}
 							>
 								Записаться на йогу
 								<svg
@@ -57,6 +58,7 @@ export default function Health() {
 							<Button
 								variant="outline"
 								className="flex h-[40px] w-[241px] justify-center items-center font-medium"
+								onClick={() => window.open('https://n1140972.yclients.com', '_blank')}
 							>
 								Перейти к расписанию
 								<svg

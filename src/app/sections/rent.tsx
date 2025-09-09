@@ -31,6 +31,7 @@ export default function Rent({ eventsData }: RentProps) {
 							<Button
 								variant="outline"
 								className="flex h-[40px] w-[208px] justify-center items-center font-medium"
+								onClick={() => window.open('https://wa.me/79180161192', '_blank')}
 							>
 								Арендовать студию
 								<svg

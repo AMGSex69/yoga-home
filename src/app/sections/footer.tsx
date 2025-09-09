@@ -62,6 +62,11 @@ export default function Footer() {
 							/>
 						</a>
 					</div>
+					<div className="text-center mt-8">
+						<p className="text-lg md:text-[22px] text-[#EEE5DC]">
+							+7 (918) 016‑11‑92
+						</p>
+					</div>
 				</div>
 			</section>
 		</>

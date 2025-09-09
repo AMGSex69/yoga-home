@@ -25,7 +25,7 @@ export default function Classes({ classesData }: ClassesProps) {
 						</p>
 					</div>
 					<div className="md:hidden flex flex-col gap-4 mt-8 mb-[5.75rem]">
-						<Button variant="solid" className="w-[18rem]">
+						<Button variant="solid" className="w-[18rem]" onClick={() => window.open('https://n1140972.yclients.com', '_blank')}>
 							Перейти к расписанию
 							<svg
 								className="ml-[14px]"
@@ -41,7 +41,7 @@ export default function Classes({ classesData }: ClassesProps) {
 								/>
 							</svg>
 						</Button>
-						<Button variant="outline" className="w-[16.1rem]">
+						<Button variant="outline" className="w-[16.1rem]" onClick={() => document.getElementById('subscriptions')?.scrollIntoView({ behavior: 'smooth' })}>
 							Наши абонементы
 							<svg
 								className="ml-[14px]"
@@ -62,7 +62,7 @@ export default function Classes({ classesData }: ClassesProps) {
 						<Carousel type="Card1" data={classesData} />
 					</div>
 					<div className="hidden md:flex flex-col md:flex-row gap-4 mt-8 md:mt-[40px]">
-						<Button variant="solid" className="w-full md:w-[228px]">
+						<Button variant="solid" className="w-full md:w-[228px]" onClick={() => window.open('https://n1140972.yclients.com', '_blank')}>
 							Перейти к расписанию
 							<svg
 								className="ml-[14px]"
@@ -78,7 +78,7 @@ export default function Classes({ classesData }: ClassesProps) {
 								/>
 							</svg>
 						</Button>
-						<Button variant="outline" className="w-full md:w-[228px]">
+						<Button variant="outline" className="w-full md:w-[228px]" onClick={() => document.getElementById('subscriptions')?.scrollIntoView({ behavior: 'smooth' })}>
 							Наши абонементы
 							<svg
 								className="ml-[14px]"
